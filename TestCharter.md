@@ -1,4 +1,4 @@
- **Exploratory Testing Session of the Monefy app**
+## **Exploratory Testing Session of the Monefy app**
 
 |  Charter|  Analyse the Strawberry Menu options |
 |--|--|
@@ -91,6 +91,86 @@
 	- The balance and expense calculations accuracy, lack of labels causing confusion.
 	-	No way to edit income and expense once entered.
 	-	UI is cluttered and not very user friendly
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+|  Charter|  Analyse the Kebab Menu options |
+|--|--|
+| **Tester**	 |Parvathi   
+| **Priority**|High|
+|**Duration**| 25 mins|
+
+**Areas :**  
+1. Categories
+2. Accounts
+3. Currencies
+4. Settings
+
+ **Test Notes**
+
+ 1. Tap on Categories
+	- Verify Add categories (expense and income:Premium feature, couldn’t test)
+	- Verify Delete categories and home page category icon update after deletion
+2. Tap on accounts
+	 - Verify Add new account and validate if updated in accounts section under left strawberry menu
+	- Verify adding money amount to accounts and validate home page is updated with the amount
+	- Verify transfer amount functionality and update in home page
+3. Tap on currencies (Premium feature, couldn’t test)
+
+4. Tap on settings
+	- verify balance
+	- verify general settings
+	- verify synchronization
+	- verify data backup
+
+**Bugs:**
+ 1. **Title**: Back button navigation is incorrect.
+**Steps to Reproduce**:
+	 - Go to homepage
+	- Select top right kebab menu
+	- Select categories
+	- Select an expense/income
+	- Select back button on phone
+
+**Actual Result** : The menu bar closes and displays home page
+
+**Expected Result**: it should navigate back to options in kebab menu ie categories,accounts,settings.
+
+2. **Title**: Data backup and restore shows as backed up and restored although it is a premium feature
+**Steps to Reproduce**:
+	 - Go to homepage
+	- Select top right kebab menu
+	- Select settings
+	- Select create data backup
+	- Navigates to file explorer to save the backup file.
+	- Select restore from same menu
+	- Prompts to select file location for restore
+
+**Actual Result** :  When backup or restore is selected user is navigated to file explorer to select the file location. File is also created. Message is also displayed – “data is restored”. Then premium feature page is displayed
+
+**Expected Result**: If it is a premium feature, user should not be allowed to select a file location for backup or restore. Also, file restored message should not be displayed.
+
+3. **Title**: Although language selection is a premium feature, language is updated in some places
+**Steps to Reproduce**:
+	 - Go to homepage
+	- Select top right kebab menu
+	- Select settings
+	- Select language as French
+	- Go to home page
+
+**Actual Result** :   The premium feature page is displayed but in home page top center, date is displayed in French.
+
+**Expected Result**:  If it is a premium feature, user should not be allowed to select a language and it should not be updated anywhere in the app.
+
+**Issues**:
+		 -  No information on what does  future recurring records feature do and how it affects the accounts
+	
+**Risks**:
+	- Malware on the mobile device can cause personal financial data leakage, can read backup files from device
+	-	Poor encryption and authentication; user can just open the app and start using it. No authentication is required. Backup files are also not encrypted
+
+
+
 
 
 
