@@ -73,24 +73,31 @@
 
 **Bugs:**
  1. **Title**: Once an expense amount is added it cannot be edited.
-**Steps to Reproduce**:
-	 - Go to homepage
-	- Select any category icon. For eg:Entertainment
-	- Add the expense amount
-	- Tap on add Entertainment button
-	- Tap on the Entertainment category
+    
+    **Steps to Reproduce**:
+	  - Go to homepage
+	  - Select any category icon. For eg:Entertainment
+	  - Add the expense amount
+	  - Tap on add Entertainment button
+	  - Tap on the Entertainment category
 
-**Actual Result** : New expense amount can be added
+    **Actual Result** : New expense amount can be added
 
-**Expected Result**: No option displayed to edit the existing expense. So if a user makes a wrong entry, it cannot be changed.
+    **Expected Result**: No option displayed to edit the existing expense. So if a user makes a wrong entry, it cannot be changed.
+
+    **Priority**: High
+
+    **Severity**: Major
 
 **Issues**:
 		 - What is the amount depicted in blue colour? No clear indication of what amount it is and user has to guess what it means	.
 	
 **Risks**:
 	- The balance and expense calculations accuracy, lack of labels causing confusion.
-	-	No way to edit income and expense once entered.
-	-	UI is cluttered and not very user friendly
+	
+	- No way to edit income and expense once entered.
+	
+	- UI is cluttered and not very user friendly
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -125,51 +132,75 @@
 
 **Bugs:**
  1. **Title**: Back button navigation is incorrect.
-**Steps to Reproduce**:
-	 - Go to homepage
-	- Select top right kebab menu
-	- Select categories
-	- Select an expense/income
-	- Select back button on phone
 
-**Actual Result** : The menu bar closes and displays home page
+    **Steps to Reproduce**:
+	  - Go to homepage
+	  - Select top right kebab menu
+	  - Select categories
+	  - Select an expense/income
+	  - Select back button on phone
 
-**Expected Result**: it should navigate back to options in kebab menu ie categories,accounts,settings.
+    **Actual Result** : The menu bar closes and displays home page
+
+    **Expected Result**: it should navigate back to options in kebab menu ie categories,accounts,settings.
+    
+    **Priority**: Low
+
+    **Severity**: Minor
 
 2. **Title**: Data backup and restore shows as backed up and restored although it is a premium feature
-**Steps to Reproduce**:
-	 - Go to homepage
-	- Select top right kebab menu
-	- Select settings
-	- Select create data backup
-	- Navigates to file explorer to save the backup file.
-	- Select restore from same menu
-	- Prompts to select file location for restore
 
-**Actual Result** :  When backup or restore is selected user is navigated to file explorer to select the file location. File is also created. Message is also displayed – “data is restored”. Then premium feature page is displayed
+    **Steps to Reproduce**:
+	  - Go to homepage
+	  - Select top right kebab menu
+	  - Select settings
+	  - Select create data backup
+	  - Navigates to file explorer to save the backup file.
+	  - Select restore from same menu
+	  - Prompts to select file location for restore
 
-**Expected Result**: If it is a premium feature, user should not be allowed to select a file location for backup or restore. Also, file restored message should not be displayed.
+     **Actual Result** :  When backup or restore is selected user is navigated to file explorer to select the file location. File is also created. Message is also   displayed – “data is restored”. Then premium feature page is displayed
+
+      **Expected Result**: If it is a premium feature, user should not be allowed to select a file location for backup or restore. Also, file restored message should not be displayed.
+
+    **Priority**: High
+
+    **Severity**: Major
 
 3. **Title**: Although language selection is a premium feature, language is updated in some places
-**Steps to Reproduce**:
+
+   **Steps to Reproduce**:
 	 - Go to homepage
-	- Select top right kebab menu
-	- Select settings
-	- Select language as French
-	- Go to home page
+	 - Select top right kebab menu
+	 - Select settings
+	 - Select language as French
+	 - Go to home page
 
-**Actual Result** :   The premium feature page is displayed but in home page top center, date is displayed in French.
+    **Actual Result** :   The premium feature page is displayed but in home page top center, date is displayed in French.
 
-**Expected Result**:  If it is a premium feature, user should not be allowed to select a language and it should not be updated anywhere in the app.
+    **Expected Result**:  If it is a premium feature, user should not be allowed to select a language and it should not be updated anywhere in the app.
+   
+    **Priority**: High
+   
+    **Severity**: Major
 
 **Issues**:
 		 -  No information on what does  future recurring records feature do and how it affects the accounts
 	
 **Risks**:
 	- Malware on the mobile device can cause personal financial data leakage, can read backup files from device
-	-	Poor encryption and authentication; user can just open the app and start using it. No authentication is required. Backup files are also not encrypted
+	
+	- Poor encryption and authentication; user can just open the app and start using it. No authentication is required. Backup files are also not encrypted
 
 
+## Summary :
+
+ **Kebab Menu** : Functionality wise, this module is of high priority. Any bugs here directly affects the homepage as well. This page also contains the accounts and settings option which are crucial to the app. However, this feature seems to have  defect clustering as it has the most number of defects found so far. 
+ 
+ **Home page**:
+ Functionality wise, this module is of high priority. Any bugs here directly affects the whole purpose of the app. Validated the functionality of all the icons; works as expected except for one bug with edit expense.
+ 
+ **Strawberry menu** : This is low priority on testing as it doesn't directly impact expense or balance in home page. The options worked as expected. All test cases passed. No bugs were observed.
 
 
 
